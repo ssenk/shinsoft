@@ -18,7 +18,7 @@ public class MyBatisTest {
 		SqlSession session = sqlSessionFactory.openSession();
 		try {
 			Blog blog = session.selectOne(
-					"org.mybatis.example.BlogMapper.selectBlog", 1);
+					"com.shinsoft.mybatis.BlogMapper.selectBlog", 1);
 			System.out.println(blog);
 		} finally {
 			session.close();
