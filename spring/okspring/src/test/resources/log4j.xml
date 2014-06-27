@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.shinsoft.spring">
+	<logger name="com.okdevtv.mvc">
 		<level value="info" />
 	</logger>
 	

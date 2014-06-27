@@ -2,18 +2,8 @@ package okjsp;
 
 public class User {
 	private String id;
-
-	private String pw;
-
-	private String confirmPw;
-
-	public String getConfirmPw() {
-		return confirmPw;
-	}
-
-	public void setConfirmPw(String confirmPw) {
-		this.confirmPw = confirmPw;
-	}
+	private String password;
+	private String confirmPassword;
 
 	public String getId() {
 		return id;
@@ -23,27 +13,25 @@ public class User {
 		this.id = id;
 	}
 
-	public String getPw() {
-		return pw;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setPw(String pw) {
-		this.pw = pw;
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getConfirmPassword() {
+		return confirmPassword;
+	}
+
+	public void setConfirmPassword(String confirmPassword) {
+		this.confirmPassword = confirmPassword;
 	}
 
 	public boolean isOk() {
-		boolean bResult = false;
-		if (id.equals("admin") && pw.equals("okpass")) {
-			bResult = true;
-		}
-		return bResult;
-	}
-
-	public boolean isConfirmed() {
-		boolean bResult = false;
-		if (pw.equals(confirmPw)) {
-			bResult = true;
-		}
-		return bResult;
+		boolean isOk = (id != null) && id.equals("admin") && (password != null)
+				&& password.equals("okpass");
+		return isOk;
 	}
 }
